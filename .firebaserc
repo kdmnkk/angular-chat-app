@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "chat-app-kdmnk": {
+      "hosting": {
+        "Chat-App": [
+          "chat-app-kdmnk"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "chat-app-kdmnk"
+  }
+}

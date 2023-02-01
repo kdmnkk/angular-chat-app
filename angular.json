@@ -100,8 +100,21 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Chat-App:build:production",
+            "firebaseProject": "chat-app-kdmnk",
+            "firebaseHostingSite": "chat-app-kdmnk"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
