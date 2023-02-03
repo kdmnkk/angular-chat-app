@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { SigninComponent } from 'src/app/features/@auth/signin/signin.component';
 import { SignupComponent } from 'src/app/features/@auth/signup/signup.component';
 import { FormContainerComponent } from 'src/app/features/@auth/form-container/form-container.component';
@@ -14,7 +15,7 @@ import { RouterModule } from '@angular/router';
   declarations: [
     SigninComponent,
     SignupComponent,
-    FormContainerComponent
+    FormContainerComponent,
   ],
   imports: [
     CommonModule,
@@ -23,7 +24,9 @@ import { RouterModule } from '@angular/router';
     MatFormFieldModule,
     MatButtonModule,
     MatDividerModule,
-    RouterModule
-  ]
+    RouterModule,
+    MatSnackBarModule,
+  ],
 })
-export class AuthModule { }
+export class AuthModule {
+}

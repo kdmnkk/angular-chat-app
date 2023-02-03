@@ -6,7 +6,7 @@ import { SignupComponent } from 'src/app/features/@auth/signup/signup.component'
 const routes: Routes = [
   { path: 'signin', component: SigninComponent },
   { path: 'signup', component: SignupComponent },
-  { path: '', loadChildren: () => import('./features/@chat/chat.module').then(m => m.ChatModule) },
+  { path: 'chat', loadChildren: () => import('./features/@chat/chat.module').then(m => m.ChatModule) },
 ];
 
 @NgModule({
