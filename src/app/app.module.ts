@@ -1,4 +1,7 @@
 import { NgModule } from '@angular/core';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { BrowserModule } from '@angular/platform-browser';
 import { AuthModule } from 'src/app/features/@auth/auth.module';
 import { ChatModule } from 'src/app/features/@chat/chat.module';
@@ -26,7 +29,10 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     MatButtonModule,
     ChatModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth())
+    provideAuth(() => getAuth()),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAnalyticsModule,
+    AngularFirestoreModule
   ],
   providers: [
     {
